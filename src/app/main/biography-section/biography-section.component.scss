@@ -1,0 +1,375 @@
+@import "src/styles.scss";
+
+@mixin ul-li($h1-font-size: 1.8rem, $li-font-size: 1.3rem) {
+  width: 50%;
+  h1 {
+    color: $base-color;
+    font-size: $h1-font-size;
+  }
+  ul {
+    li {
+      color: $titanium-white;
+      font-size: $li-font-size;
+      margin-left: 20px;
+    }
+  }
+}
+
+@mixin change-block($display){
+  display: $display;
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+
+.biography-section {
+  @include flex-display();
+
+  height: 100vh;
+  background-color: $second-base-color;
+}
+
+.biography-container {
+  @include flex-display();
+  @include width-height(80%,80%);
+
+  background: #101820;
+  box-shadow: inset -7px 7px 18px #060a0d, inset 7px -7px 18px #1a2633;
+
+  .left-container {
+    @include flex-display();
+    @include width-height(80%,80%);
+
+    .slide-container {
+      @include flex-display();
+      @include width-height(95%,95%);
+
+      border-radius: 5%;
+      background: linear-gradient(225deg, #111a22, #0e161d);
+      box-shadow: -22px 22px 44px #0c1218, 22px -22px 44px #141e28;
+
+      .biography-frame {
+        @include flex-display(flex-start, center, column);
+        @include width-height(80%, 150%);
+
+        .title {
+          @include flex-display(flex-start, flex-end);
+          @include width-height(100%, 30%);
+
+          h1 {
+            font-size: 2rem;
+            color: $titanium-white;
+          }
+        }
+
+        .line {
+          @include flex-display(flex-start);
+          @include width-height(100%, 10%);
+
+          .another-line {
+            @include width-height(100%, 5%);
+
+            background-color: $base-color;
+          }
+        }
+
+        .text {
+          @include flex-display(flex-start, flex-start);
+          @include width-height(100%, 60%);
+
+          .generalSkills {
+            @include ul-li()
+          }
+
+          .languages {
+            @include ul-li()
+          }
+          p {
+            color: $titanium-white;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .info-container {
+    @include flex-display(center, flex-start, column);
+    @include width-height(10%, 80%);
+
+    .info-circle {
+      @include flex-display();
+      @include width-height(12vh, 12vh);
+
+      margin-left: 2em;
+      border-radius: 50%;
+      background: linear-gradient(225deg, #111a22, #0e161d);
+      box-shadow: -8px 8px 16px #0a1015, 8px -8px 16px #16202b;
+      margin-top: 2em;
+      cursor: pointer;
+
+      &:active {
+        background: #101820;
+        box-shadow: inset -8px 8px 16px #0a1015, inset 8px -8px 16px #16202b;
+
+        .info-name {
+          font-size: 1.9rem;
+        }
+      }
+
+      .info-name {
+        font-size: 2rem;
+        color: $titanium-white;
+      }
+    }
+  }
+}
+
+#General {
+  @include change-block(block)
+}
+
+#Soft {
+  @include change-block(none)
+}
+
+#Other {
+  @include change-block(none)
+}
+
+#Hard {
+  @include change-block(none)
+}
+
+@media (min-width: 1281px) {
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .biography-container {
+    flex-direction: row;
+
+    .left-container {
+      @include flex-display();
+      @include width-height(80%, 80%);
+
+      .slide-container {
+        .biography-frame {
+          .title {
+            h1 {
+              font-size: 1.5rem;
+            }
+          }
+
+          .text {
+            p {
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .info-container {
+      @include flex-display(center,center,column);
+      @include width-height(10%, 80%);
+
+      .info-circle {
+        @include width-height(11vh, 11vh);
+
+        margin-left: 20px;
+
+        .info-name {
+          font-size: 1.5rem;
+          color: $titanium-white;
+        }
+
+        &:active {
+          .info-name {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .biography-container {
+    flex-direction: column;
+
+    .left-container {
+      @include width-height(90%, 70%);
+
+      .slide-container {
+        .biography-frame {
+          .title {
+            h1 {
+              font-size: 1.5rem;
+            }
+          }
+
+          .text {
+            p {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .info-container {
+      @include width-height(100%, 20%);
+      @include flex-display(space-around,center,row);
+
+      .info-circle {
+        @include width-height(11vh, 11vh);
+
+        margin-left: 0;
+
+        .info-name {
+          font-size: 1.5rem;
+          color: $titanium-white;
+        }
+
+        &:active {
+          .info-name {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .biography-container {
+    flex-direction: column;
+
+    .left-container {
+      @include width-height(90%, 70%);
+
+      .slide-container {
+        .biography-frame {
+          .title {
+            h1 {
+              font-size: 1.5rem;
+            }
+          }
+
+          .text {
+            flex-direction: column;
+            .generalSkills {
+              width: 100%;
+              @include ul-li(1.3rem, 1rem);
+            }
+            .languages {
+              width: 100%;
+              @include ul-li(1.3rem, 1rem);
+            }
+            p {
+              font-size: .9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .info-container {
+      @include flex-display(space-around, center, row);
+      @include width-height(100%, 20%);
+
+      .info-circle {
+        @include width-height(9vh, 9vh);
+
+        margin-left: 0;
+
+        .info-name {
+          font-size: 1.5rem;
+          color: $titanium-white;
+        }
+        &:active {
+          .info-name {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .biography-container {
+    flex-direction: column;
+
+    .left-container {
+      @include width-height(90%, 70%);
+
+      .slide-container {
+        .biography-frame {
+          .title {
+            h1 {
+              font-size: 1.5rem;
+            }
+          }
+
+          .text {
+            flex-direction: column;
+            .generalSkills {
+              width: 100%;
+              @include ul-li(1.1rem, .8rem);
+            }
+            .languages {
+              width: 100%;
+              @include ul-li(1.1rem, .8rem);
+            }
+            p {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .info-container {
+      @include flex-display(space-around, center, row);
+      @include width-height(100%, 20%);
+
+      .info-circle {
+        @include width-height(7vh, 7vh);
+        margin-left: 0;
+
+        .info-name {
+          font-size: 1rem;
+          color: $titanium-white;
+        }
+        &:active {
+          .info-name {
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  }
+}

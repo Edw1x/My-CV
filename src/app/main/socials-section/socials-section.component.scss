@@ -1,0 +1,123 @@
+@import "src/styles.scss";
+
+.socials {
+  @include flex-display(center,center,row);
+
+  height: 100vh;
+  background-color: $second-base-color;
+}
+
+.socials-container {
+  @include flex-display(space-around,center,row);
+  @include width-height(70%, 50%);
+
+  background: #101820;
+  box-shadow: inset -7px 7px 18px #060a0d, inset 7px -7px 18px #1a2633;
+
+  .social-circle {
+    @include flex-display(center,center,row);
+    @include width-height(15em, 15em);
+
+    border-radius: 50%;
+    background: linear-gradient(225deg, #111a22, #0e161d);
+    box-shadow: -7px 7px 18px #060a0d, 7px -7px 18px #1a2633;
+    background-color: $second-base-color;
+    cursor: pointer;
+
+    i {
+      font-size: 5rem;
+      color: $titanium-white;
+    }
+
+    &:active {
+      background: #101820;
+      box-shadow: inset -7px 7px 18px #060a0d, inset 7px -7px 18px #1a2633;
+      i {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1281px) {
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .socials-container{
+    justify-content: space-around;
+    .social-circle{
+      @include width-height(20vh, 20vh);
+
+      i {
+        font-size: 4rem;
+        color: $titanium-white;
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .socials-container{
+    justify-content: space-around;
+    .social-circle{
+      @include width-height(15vh, 15vh);
+
+      i {
+        font-size: 2.7rem;
+        color: $titanium-white;
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .socials-container{
+    flex-direction: column;
+    justify-content: space-around;
+
+    .social-circle{
+      @include width-height(13vh, 13vh);
+
+      i {
+        font-size: 2.7rem;
+        color: $titanium-white;
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .socials-container{
+    flex-direction: column;
+    justify-content: space-around;
+
+    .social-circle{
+      @include width-height(12vh, 12vh);
+
+      i {
+        font-size: 2.7rem;
+        color: $titanium-white;
+      }
+    }
+  }
+}

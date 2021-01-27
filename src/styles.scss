@@ -1,0 +1,81 @@
+@import url(~fullpage.js/dist/fullpage.min.css);
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+//color
+$base-color: #06b38f;
+$second-base-color: #101820;
+$titanium-white: #fcf6f5ff;
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+i {
+  font-family: fontawesome !important;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+@keyframes guchi {
+  from {
+    border-bottom-color: $titanium-white;
+  }
+
+  90% {
+    border-bottom-color: $base-color;
+  }
+
+  80% {
+    border-bottom-color: $titanium-white;
+  }
+
+  70% {
+    border-bottom-color: $base-color;
+  }
+
+  60% {
+    border-bottom-color: $titanium-white;
+  }
+
+  50% {
+    border-bottom-color: $base-color;
+  }
+
+  40% {
+    border-bottom-color: $titanium-white;
+  }
+
+  30% {
+    border-bottom-color: $base-color;
+  }
+
+  20% {
+    border-bottom-color: $titanium-white;
+  }
+}
+
+@mixin flex-display($justify-content:center, $align-items:center, $lex-direction: row) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $lex-direction;
+}
+
+@mixin width-height($width, $height){
+  width: $width;
+  height: $height;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

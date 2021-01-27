@@ -1,0 +1,364 @@
+@import "src/styles.scss";
+
+.hero {
+  height: 100vh;
+  background-color: $second-base-color;
+}
+
+.info-line {
+  @include flex-display(center,stretch,row);
+
+  margin-top: 1rem;
+  width: 85%;
+
+  .info-line-title {
+    @include flex-display(flex-end,stretch,row);
+
+    width: 25%;
+
+    h1 {
+      color: $titanium-white;
+      font-size: 2rem;
+      font-weight: 500;
+      font-stretch: expanded;
+
+      li {
+        font-size: 1rem;
+        font-weight: 100;
+        color: $base-color;
+        list-style: circle;
+      }
+    }
+  }
+
+  .info-line-separator {
+    @include flex-display(center,stretch,column);
+    @include width-height(0.3%, 100%);
+
+    margin: 0 1rem;
+
+    div{
+      @include width-height(100%, 75%);
+
+      background-color: rgb(255, 255, 255);
+      margin-bottom: 20px;
+    }
+  }
+
+  .info-line-text {
+    @include flex-display(left,stretch,row);
+
+    width: 69.7%;
+
+    p {
+      margin-top: 5px;
+      color: $titanium-white;
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-stretch: expanded;
+    }
+  }
+}
+
+.hero-bottom-gradient {
+  @include flex-display(center,stretch,row);
+  @include width-height(100%, 15%);
+
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(145deg, #111a22, #0e161d);
+  box-shadow: 10px 10px 20px #0d131a, -10px -10px 20px #131d26;
+}
+
+.main-hero-content {
+  @include flex-display(center,stretch,row);
+
+  position: absolute;
+  top: 25%;
+  width: 100%;
+
+  .main-text {
+    @include flex-display(center,center,row);
+
+    animation: fadeIn ease 8s;
+    -webkit-animation: fadeIn ease 8s;
+    -moz-animation: fadeIn ease 8s;
+    -o-animation: fadeIn ease 8s;
+    -ms-animation: fadeIn ease 8s;
+
+    width: 50%;
+
+    h1 {
+      margin-left: 50px;
+      margin-top: 40px;
+      color: $titanium-white;
+      font-size: 5rem;
+      font-weight: 900;
+      font-stretch: expanded;
+
+      span {
+        font-size: 0.5em;
+        font-weight: 100;
+        background: linear-gradient(145deg, #111a22, #0e161d);
+        box-shadow: 10px 10px 20px #0d131a, -10px -10px 20px #131d26;
+        color: $base-color;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  .main-logo {
+    @include flex-display(center,center,row);
+
+    width: 50%;
+    text-align: center;
+
+    .logo {
+      @include flex-display(center,center,row);
+      @include width-height(27em, 27em);
+
+      text-align: center;
+      border-radius: 25%;
+      background-color: $second-base-color;
+      background: #101820;
+      box-shadow: inset -5px 5px 30px #060a0d, inset 5px -5px 30px #1a2633;
+
+      .logo-center {
+        @include width-height(15em, 15em);
+
+        border-radius: 50%;
+        border: 15px solid $second-base-color;
+        background: linear-gradient(
+            225deg,
+            rgba(17, 26, 34, 0.2),
+            rgba(14, 22, 29, 0.2)
+          ),
+          url(D:\AngularResume\resume\src\assets\me.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-shadow: -11px 11px 30px #060a0d, 11px -11px 30px #1a2633;
+
+        &:hover {
+          border-bottom: 15px solid $base-color;
+          animation: guchi;
+          animation-duration: 2s;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1281px) {
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .main-hero-content {
+    justify-content: center;
+    .main-text {
+      h1 {
+        margin-left: 0px;
+        font-size: 3em;
+        text-align: center;
+        span {
+          font-size: 0.65em;
+        }
+      }
+    }
+
+    .main-logo {
+      margin-top: 50px;
+      .logo {
+        @include width-height(23em, 23em);
+
+        .logo-center {
+          @include width-height(14em, 14em);
+        }
+      }
+    }
+  }
+
+  .info-line {
+    width: 100%;
+    .info-line-title {
+
+      h1 {
+        font-size: 1.7rem;
+        li {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .info-line-text {
+      width: 60%;
+      p {
+        font-size: 1.05rem;
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-hero-content {
+    justify-content: center;
+    .main-text {
+      h1 {
+        margin-left: 0px;
+        font-size: 2.5em;
+        text-align: center;
+        span {
+          font-size: 0.7em;
+        }
+      }
+    }
+
+    .main-logo {
+      margin-top: 50px;
+      .logo {
+        @include width-height(19em, 19em);
+
+        .logo-center {
+          @include width-height(12em, 12em);
+        }
+      }
+    }
+  }
+
+  .info-line {
+    width: 100%;
+    .info-line-title {
+      h1 {
+        font-size: 1.4rem;
+        li {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .info-line-text {
+      width: 55%;
+      p {
+        font-size: .9rem;
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .main-hero-content {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    .main-text {
+      width: 100%;
+      h1 {
+        margin-left: 0px;
+        font-size: 2.2em;
+        text-align: center;
+        span {
+          font-size: 0.65em;
+        }
+      }
+    }
+
+    .main-logo {
+      margin-top: 50px;
+      width: 100%;
+      .logo {
+        @include width-height(17em, 17em);
+
+        .logo-center {
+          @include width-height(11em, 11em);
+        }
+      }
+    }
+  }
+
+  .info-line {
+    .info-line-title {
+      display: none;
+    }
+
+    .info-line-separator {
+      display: none;
+    }
+
+    .info-line-text {
+      width: 100%;
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .main-hero-content {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    .main-text {
+      width: 100%;
+      h1 {
+        margin-left: 0px;
+        font-size: 2em;
+        text-align: center;
+        span {
+          font-size: 0.6em;
+        }
+      }
+    }
+
+    .main-logo {
+      margin-top: 50px;
+      width: 100%;
+      .logo {
+        @include width-height(15em, 15em);
+
+        .logo-center {
+          @include width-height(10em, 10em);
+        }
+      }
+    }
+  }
+
+  .info-line {
+    .info-line-title {
+      display: none;
+    }
+
+    .info-line-separator {
+      display: none;
+    }
+
+    .info-line-text {
+      width: 100%;
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
