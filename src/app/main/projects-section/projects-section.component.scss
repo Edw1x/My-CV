@@ -1,7 +1,174 @@
 @import "src/styles.scss";
 
+.project-section {
+  @include flex-display();
 
-.project-section{
   height: 100vh;
   background-color: $second-base-color;
+
+  .project-container {
+    @include flex-display(space-around);
+    @include width-height(80%, 80%);
+
+    background: #101820;
+    box-shadow: inset -7px 7px 18px #060a0d, inset 7px -7px 18px #1a2633;
+
+    .project-box {
+      @include flex-display();
+      @include width-height(45%, 80%);
+
+      border-radius: 5%;
+      background: linear-gradient(225deg, #111a22, #0e161d);
+      box-shadow: -22px 22px 44px #0c1218, 22px -22px 44px #141e28;
+
+      .project-box-container {
+        @include flex-display(flex-start, flex-start, column);
+        @include width-height(80%, 80%);
+
+        .title {
+          @include flex-display(flex-start, center);
+          @include width-height(100%, 20%);
+
+          h1 {
+            font-size: 2rem;
+            color: $titanium-white;
+          }
+        }
+
+        .line {
+          @include flex-display(flex-start, flex-startr);
+          @include width-height(100%, 10%);
+
+          .another-line {
+            @include width-height(100%, 5%);
+
+            background-color: $base-color;
+          }
+        }
+
+        .middle-text {
+          @include flex-display(flex-start, flex-start);
+          @include width-height(100%, 25%);
+
+          p {
+            color: $titanium-white;
+            font-size: 1rem;
+          }
+        }
+
+        .project-photos {
+          @include width-height(100%, 34%);
+          justify-items: center;
+          align-items: center;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+
+          .photo-frame {
+            @include flex-display(center, center);
+            @include width-height(13vh, 13vh);
+
+            box-shadow: inset -10px 10px 32px #090e13,
+              inset 10px -10px 32px #17222d;
+          }
+
+          .photo-frame:nth-of-type(1) {
+            background: linear-gradient(
+                225deg,
+                rgba(17, 26, 34, 0.1),
+                rgba(14, 22, 29, 0.1)
+              ),
+              url(/assets/wedding_0.jpg);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+          }
+
+
+          .photo-frame:nth-of-type(2) {
+            background: linear-gradient(
+                225deg,
+                rgba(17, 26, 34, 0.1),
+                rgba(14, 22, 29, 0.1)
+              ),
+              url(/assets/wedding_1.jpg);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+          }
+
+
+          .photo-frame:nth-of-type(3) {
+            background: linear-gradient(
+                225deg,
+                rgba(17, 26, 34, 0.1),
+                rgba(14, 22, 29, 0.1)
+              ),
+              url(/assets/wedding_2.jpg);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+          }
+
+          .photo-frame:nth-of-type(4) {
+            background: linear-gradient(
+                225deg,
+                rgba(17, 26, 34, 0.1),
+                rgba(14, 22, 29, 0.1)
+              ),
+              url(/assets/wedding_3.jpg);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+          }
+        }
+
+        .bottom-see-more {
+          @include flex-display(flex-end, flex-end);
+          @include width-height(100%, 11%);
+
+          .text-container {
+            width: 50%;
+
+            p {
+              color: $titanium-white;
+              font-size: 1rem;
+            }
+          }
+
+          .button-container {
+            @include flex-display(space-around, center, row);
+
+            width: 50%;
+
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: $titanium-white;
+              font-size: 1rem;
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+                sans-serif;
+              font-weight: bold;
+              font-stretch: expanded;
+              cursor: pointer;
+              width: 100px;
+              height: 50px;
+              border-radius: 28px;
+              background: linear-gradient(225deg, #0e161d, #111a22);
+              box-shadow: -10px 10px 17px #0d141b, 10px -10px 17px #131c25;
+            }
+            a:hover {
+              p {
+                font-size: 0.8rem;
+              }
+              background: #101820;
+              box-shadow: inset -10px 10px 17px #0d141b,
+                inset 10px -10px 17px #131c25;
+            }
+          }
+        }
+      }
+    }
+  }
 }
