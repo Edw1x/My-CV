@@ -12,4 +12,8 @@ export class ProjectsSectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToWeddingDress(): void {
+    window.location.href = 'http://roxolanastudio.com/';
+  }
+
 }

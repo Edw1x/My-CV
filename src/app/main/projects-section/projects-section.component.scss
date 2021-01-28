@@ -1,5 +1,24 @@
 @import "src/styles.scss";
 
+@mixin photo-fr() {
+  @include flex-display(center, center);
+  @include width-height(13vh, 13vh);
+
+  box-shadow: inset -10px 10px 32px #090e13, inset 10px -10px 32px #17222d;
+}
+
+@mixin photo-fr-nth-child($link) {
+  background: linear-gradient(
+      225deg,
+      rgba(17, 26, 34, 0.1),
+      rgba(14, 22, 29, 0.1)
+    ),
+    url($link);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .project-section {
   @include flex-display();
 
@@ -64,61 +83,43 @@
           grid-template-columns: repeat(4, 1fr);
 
           .photo-frame {
-            @include flex-display(center, center);
-            @include width-height(13vh, 13vh);
+            @include photo-fr();
+          }
 
-            box-shadow: inset -10px 10px 32px #090e13,
-              inset 10px -10px 32px #17222d;
+          .photo-frame-second {
+            @include photo-fr();
           }
 
           .photo-frame:nth-of-type(1) {
-            background: linear-gradient(
-                225deg,
-                rgba(17, 26, 34, 0.1),
-                rgba(14, 22, 29, 0.1)
-              ),
-              url(/assets/wedding_0.jpg);
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center;
+            @include photo-fr-nth-child("/assets/wedding_0.jpg");
           }
-
 
           .photo-frame:nth-of-type(2) {
-            background: linear-gradient(
-                225deg,
-                rgba(17, 26, 34, 0.1),
-                rgba(14, 22, 29, 0.1)
-              ),
-              url(/assets/wedding_1.jpg);
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center;
+            @include photo-fr-nth-child("/assets/wedding_1.jpg");
           }
 
-
           .photo-frame:nth-of-type(3) {
-            background: linear-gradient(
-                225deg,
-                rgba(17, 26, 34, 0.1),
-                rgba(14, 22, 29, 0.1)
-              ),
-              url(/assets/wedding_2.jpg);
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center;
+            @include photo-fr-nth-child("/assets/wedding_2.jpg");
           }
 
           .photo-frame:nth-of-type(4) {
-            background: linear-gradient(
-                225deg,
-                rgba(17, 26, 34, 0.1),
-                rgba(14, 22, 29, 0.1)
-              ),
-              url(/assets/wedding_3.jpg);
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center;
+            @include photo-fr-nth-child("/assets/wedding_3.jpg");
+          }
+
+          .photo-frame-second:nth-of-type(1) {
+            @include photo-fr-nth-child("/assets/Freelance_0.jpg");
+          }
+
+          .photo-frame-second:nth-of-type(2) {
+            @include photo-fr-nth-child("/assets/Freelance_1.jpg");
+          }
+
+          .photo-frame-second:nth-of-type(3) {
+            @include photo-fr-nth-child("/assets/Freelance_2.jpg");
+          }
+
+          .photo-frame-second:nth-of-type(4) {
+            @include photo-fr-nth-child("/assets/Freelance_3.jpg");
           }
         }
 
@@ -136,27 +137,26 @@
           }
 
           .button-container {
-            @include flex-display(space-around, center, row);
+            @include flex-display(flex-end, center, row);
 
             width: 50%;
 
             a {
-              display: flex;
-              align-items: center;
-              justify-content: center;
+              @include flex-display();
+              @include width-height(120px, 60px);
+
               color: $titanium-white;
-              font-size: 1rem;
+              font-size: 0.9rem;
               font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                 Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
                 sans-serif;
               font-weight: bold;
               font-stretch: expanded;
               cursor: pointer;
-              width: 100px;
-              height: 50px;
+
               border-radius: 28px;
-              background: linear-gradient(225deg, #0e161d, #111a22);
-              box-shadow: -10px 10px 17px #0d141b, 10px -10px 17px #131c25;
+              background: linear-gradient(225deg, #111a22, #0e161d);
+              box-shadow: -10px 10px 20px #0b1117, 10px -10px 20px #151f29;
             }
             a:hover {
               p {
@@ -165,6 +165,299 @@
               background: #101820;
               box-shadow: inset -10px 10px 17px #0d141b,
                 inset 10px -10px 17px #131c25;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1900px){
+  .project-section {
+    .project-container {
+      .project-box {
+        .project-box-container {
+          .title {
+            @include width-height(100%, 25%);
+            h1 {
+              font-size: 2.2rem;
+            }
+          }
+
+          .middle-text {
+            @include width-height(100%, 50%);
+
+            p {
+              font-size: 1.3rem;
+            }
+          }
+          .project-photos {
+            display: none;
+          }
+
+          .bottom-see-more {
+            @include width-height(100%, 25%);
+
+            .text-container {
+              width: 60%;
+              p {
+                font-size: 0.9rem;
+              }
+            }
+            .button-container {
+              width: 40%;
+
+              a {
+                @include width-height(120px, 60px);
+                font-size: 0.9rem;
+                border-radius: 28px;
+              }
+              a:hover {
+                p {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .project-section {
+    .project-container {
+      flex-direction: column;
+      .project-box {
+        @include width-height(90%, 45%);
+        .project-box-container {
+          .title {
+            @include width-height(100%, 25%);
+            h1 {
+              font-size: 2rem;
+            }
+          }
+
+          .middle-text {
+            @include width-height(100%, 50%);
+
+            p {
+              font-size: 1.05rem;
+            }
+          }
+          .project-photos {
+            display: none;
+          }
+
+          .bottom-see-more {
+            @include width-height(100%, 25%);
+
+            .text-container {
+              width: 60%;
+              p {
+                font-size: 0.9rem;
+              }
+            }
+            .button-container {
+              width: 40%;
+
+              a {
+                @include width-height(120px, 60px);
+                font-size: 0.9rem;
+                border-radius: 28px;
+              }
+              a:hover {
+                p {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project-section {
+    .project-container {
+      flex-direction: column;
+      .project-box {
+        @include width-height(90%, 45%);
+        .project-box-container {
+          .title {
+            @include width-height(100%, 25%);
+            h1 {
+              font-size: 1.8rem;
+            }
+          }
+
+          .middle-text {
+            @include width-height(100%, 50%);
+
+            p {
+              font-size: 0.85rem;
+            }
+          }
+          .project-photos {
+            display: none;
+          }
+
+          .bottom-see-more {
+            @include width-height(100%, 25%);
+
+            .text-container {
+              width: 60%;
+              p {
+                font-size: 0.75rem;
+              }
+            }
+            .button-container {
+              width: 40%;
+
+              a {
+                @include width-height(100px, 50px);
+                font-size: 0.7rem;
+                border-radius: 28px;
+              }
+              a:hover {
+                p {
+                  font-size: 0.6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .project-section {
+    .project-container {
+      flex-direction: column;
+      .project-box {
+        @include width-height(90%, 45%);
+        .project-box-container {
+          .title {
+            @include width-height(100%, 25%);
+            h1 {
+              font-size: 1.6rem;
+            }
+          }
+
+          .middle-text {
+            @include width-height(100%, 50%);
+
+            p {
+              font-size: 0.75rem;
+            }
+          }
+          .project-photos {
+            display: none;
+          }
+
+          .bottom-see-more {
+            @include width-height(100%, 25%);
+
+            .text-container {
+              width: 60%;
+              p {
+                font-size: 0.75rem;
+              }
+            }
+            .button-container {
+              width: 40%;
+
+              a {
+                @include width-height(90px, 40px);
+                font-size: 0.65rem;
+                border-radius: 28px;
+              }
+              a:hover {
+                p {
+                  font-size: 0.6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .project-section {
+    .project-container {
+      flex-direction: column;
+      .project-box {
+        @include width-height(90%, 45%);
+        .project-box-container {
+          .title {
+            @include width-height(100%, 25%);
+            h1 {
+              font-size: 1.4rem;
+            }
+          }
+
+          .middle-text {
+            @include width-height(100%, 45%);
+
+            p {
+              font-size: 0.63rem;
+            }
+          }
+          .project-photos {
+            display: none;
+          }
+
+          .bottom-see-more {
+            @include width-height(100%, 25%);
+
+            .text-container {
+              width: 60%;
+              p {
+                font-size: 0.6rem;
+              }
+            }
+            .button-container {
+              width: 40%;
+
+              a {
+                @include width-height(75px, 45px);
+                font-size: 0.55rem;
+                border-radius: 28px;
+              }
+              a:hover {
+                p {
+                  font-size: 0.5rem;
+                }
+              }
             }
           }
         }
