@@ -55,8 +55,8 @@
         }
 
         .line {
-          @include flex-display(flex-start, flex-startr);
-          @include width-height(100%, 10%);
+          @include flex-display(flex-start, flex-start);
+          @include width-height(100%, 5%);
 
           .another-line {
             @include width-height(100%, 5%);
@@ -76,7 +76,7 @@
         }
 
         .project-photos {
-          @include width-height(100%, 34%);
+          @include width-height(100%, 40%);
           justify-items: center;
           align-items: center;
           display: grid;
@@ -125,7 +125,7 @@
 
         .bottom-see-more {
           @include flex-display(flex-end, flex-end);
-          @include width-height(100%, 11%);
+          @include width-height(100%, 10%);
 
           .text-container {
             width: 50%;
@@ -173,23 +173,23 @@
   }
 }
 
-@media (min-width: 1281px) and (max-width: 1900px){
+@media (min-width: 1281px) and (max-width: 1700px){
   .project-section {
     .project-container {
       .project-box {
         .project-box-container {
           .title {
-            @include width-height(100%, 25%);
+            @include width-height(100%, 20%);
             h1 {
-              font-size: 2.2rem;
+              font-size: 1.8rem;
             }
           }
 
           .middle-text {
-            @include width-height(100%, 50%);
+            @include width-height(100%, 70%);
 
             p {
-              font-size: 1.3rem;
+              font-size: 1.1rem;
             }
           }
           .project-photos {
@@ -197,7 +197,7 @@
           }
 
           .bottom-see-more {
-            @include width-height(100%, 25%);
+            @include width-height(100%, 10%);
 
             .text-container {
               width: 60%;
@@ -301,7 +301,7 @@
           .title {
             @include width-height(100%, 25%);
             h1 {
-              font-size: 1.8rem;
+              font-size: 1.5rem;
             }
           }
 
@@ -361,7 +361,7 @@
           .title {
             @include width-height(100%, 25%);
             h1 {
-              font-size: 1.6rem;
+              font-size: 1.2rem;
             }
           }
 
@@ -369,67 +369,7 @@
             @include width-height(100%, 50%);
 
             p {
-              font-size: 0.75rem;
-            }
-          }
-          .project-photos {
-            display: none;
-          }
-
-          .bottom-see-more {
-            @include width-height(100%, 25%);
-
-            .text-container {
-              width: 60%;
-              p {
-                font-size: 0.75rem;
-              }
-            }
-            .button-container {
-              width: 40%;
-
-              a {
-                @include width-height(90px, 40px);
-                font-size: 0.65rem;
-                border-radius: 28px;
-              }
-              a:hover {
-                p {
-                  font-size: 0.6rem;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-/*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .project-section {
-    .project-container {
-      flex-direction: column;
-      .project-box {
-        @include width-height(90%, 45%);
-        .project-box-container {
-          .title {
-            @include width-height(100%, 25%);
-            h1 {
-              font-size: 1.4rem;
-            }
-          }
-
-          .middle-text {
-            @include width-height(100%, 45%);
-
-            p {
-              font-size: 0.63rem;
+              font-size: 0.6rem;
             }
           }
           .project-photos {
@@ -450,12 +390,73 @@
 
               a {
                 @include width-height(75px, 45px);
-                font-size: 0.55rem;
-                border-radius: 28px;
+                font-size: 0.6rem;
+                border-radius: 20px;
               }
               a:hover {
                 p {
                   font-size: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (max-width: 480px) {
+  .project-section {
+    .project-container {
+      flex-direction: column;
+      .project-box {
+        @include width-height(90%, 45%);
+        .project-box-container {
+          .title {
+            @include width-height(100%, 25%);
+            h1 {
+              font-size: 1.2rem;
+            }
+          }
+
+          .middle-text {
+            @include width-height(100%, 45%);
+
+            p {
+              font-size: 0.6rem;
+            }
+          }
+          .project-photos {
+            display: none;
+          }
+
+          .bottom-see-more {
+            @include width-height(100%, 25%);
+
+            .text-container {
+              width: 60%;
+              p {
+                font-size: 0.5rem;
+              }
+            }
+            .button-container {
+              @include flex-display(flex-end, flex-end, row);
+              width: 40%;
+
+              a {
+                @include width-height(65px, 35px);
+                font-size: 0.5rem;
+                border-radius: 25px;
+              }
+              a:hover {
+                p {
+                  font-size: 0.4rem;
                 }
               }
             }

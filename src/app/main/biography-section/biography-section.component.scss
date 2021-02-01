@@ -1,7 +1,7 @@
 @import "src/styles.scss";
 
 @mixin ul-li($h1-font-size: 1.8rem, $li-font-size: 1.3rem) {
-  width: 50%;
+  width: 100%;
   h1 {
     color: $base-color;
     font-size: $h1-font-size;
@@ -66,7 +66,7 @@
 
         .line {
           @include flex-display(flex-start);
-          @include width-height(100%, 10%);
+          @include width-height(100%, 5%);
 
           .another-line {
             @include width-height(100%, 5%);
@@ -211,7 +211,7 @@
 
     .left-container {
       @include width-height(90%, 70%);
-
+      margin-top: 1em;
       .slide-container {
         .biography-frame {
           .title {
@@ -230,7 +230,7 @@
     }
 
     .info-container {
-      @include width-height(100%, 20%);
+      @include width-height(100%, 30%);
       @include flex-display(space-around,center,row);
 
       .info-circle {
@@ -263,8 +263,8 @@
     flex-direction: column;
 
     .left-container {
-      @include width-height(90%, 70%);
-
+      @include width-height(90%, 60%);
+      margin-top: 1em;
       .slide-container {
         .biography-frame {
           .title {
@@ -277,14 +277,14 @@
             flex-direction: column;
             .generalSkills {
               width: 100%;
-              @include ul-li(1.3rem, 1rem);
+              @include ul-li(1.1rem, 1rem);
             }
             .languages {
               width: 100%;
-              @include ul-li(1.3rem, 1rem);
+              @include ul-li(1.1rem, 1rem);
             }
             p {
-              font-size: .9rem;
+              font-size: .8rem;
             }
           }
         }
@@ -292,12 +292,12 @@
     }
 
     .info-container {
-      @include flex-display(space-around, center, row);
-      @include width-height(100%, 20%);
-
+      @include flex-display(center, center, column);
+      @include width-height(100%, 40%);
+      flex-wrap: wrap;
       .info-circle {
-        @include width-height(9vh, 9vh);
-
+        @include width-height(11vh, 11vh);
+        margin-top: 1.2em;
         margin-left: 0;
 
         .info-name {
@@ -306,7 +306,7 @@
         }
         &:active {
           .info-name {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
           }
         }
       }
@@ -319,18 +319,19 @@
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .biography-container {
     flex-direction: column;
 
     .left-container {
-      @include width-height(90%, 70%);
-
+      @include width-height(90%, 60%);
+      margin-top: 1em;
       .slide-container {
+        margin-top: .5rem;
         .biography-frame {
           .title {
             h1 {
-              font-size: 1.5rem;
+              font-size: 1.4rem;
             }
           }
 
@@ -338,14 +339,14 @@
             flex-direction: column;
             .generalSkills {
               width: 100%;
-              @include ul-li(1.1rem, .8rem);
+              @include ul-li(1rem, .8rem);
             }
             .languages {
               width: 100%;
-              @include ul-li(1.1rem, .8rem);
+              @include ul-li(1rem, .8rem);
             }
             p {
-              font-size: 0.8rem;
+              font-size: 0.78rem;
             }
           }
         }
@@ -353,11 +354,12 @@
     }
 
     .info-container {
-      @include flex-display(space-around, center, row);
-      @include width-height(100%, 20%);
-
+      @include flex-display(center, center, column);
+      @include width-height(100%, 40%);
+      flex-wrap: wrap;
       .info-circle {
-        @include width-height(7vh, 7vh);
+        @include width-height(9vh, 9vh);
+        margin-top: 1.4em;
         margin-left: 0;
 
         .info-name {
