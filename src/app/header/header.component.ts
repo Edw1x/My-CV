@@ -11,14 +11,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   goToSocials(): void {
-    window.location.href = '/#socials';
+    window.location.href = '/My-CV/#socials';
   }
 
   goToProjects(): void {
-    window.location.href = '/#projects';
+    window.location.href = '/My-CV/#projects';
   }
 
   goToBio(): void {
-    window.location.href = '/#bio';
+    window.location.href = '/My-CV/#bio';
   }
 }
