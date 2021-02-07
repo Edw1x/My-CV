@@ -15,5 +15,7 @@ export class ProjectsSectionComponent implements OnInit {
   goToWeddingDress(): void {
     window.location.href = 'http://roxolanastudio.com/';
   }
-
+  goToWanderlance(): void {
+    window.location.href = 'https://github.com/Edw1x/Wanderlance-Front-end';
+  }
 }

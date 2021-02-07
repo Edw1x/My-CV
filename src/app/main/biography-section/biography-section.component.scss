@@ -76,14 +76,16 @@
         }
 
         .text {
-          @include flex-display(flex-start, flex-start);
+          @include flex-display(flex-start, flex-start, column);
           @include width-height(100%, 60%);
 
           .generalSkills {
+            width: 100%;
             @include ul-li()
           }
 
           .languages {
+            width: 100%;
             @include ul-li()
           }
           p {
@@ -144,6 +146,7 @@
 }
 
 @media (min-width: 1281px) {
+
 }
 
 /*
@@ -274,13 +277,10 @@
           }
 
           .text {
-            flex-direction: column;
             .generalSkills {
-              width: 100%;
               @include ul-li(1.1rem, 1rem);
             }
             .languages {
-              width: 100%;
               @include ul-li(1.1rem, 1rem);
             }
             p {
@@ -336,13 +336,10 @@
           }
 
           .text {
-            flex-direction: column;
             .generalSkills {
-              width: 100%;
               @include ul-li(1rem, .8rem);
             }
             .languages {
-              width: 100%;
               @include ul-li(1rem, .8rem);
             }
             p {

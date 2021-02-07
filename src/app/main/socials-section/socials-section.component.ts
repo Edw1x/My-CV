@@ -18,4 +18,8 @@ export class SocialsSectionComponent implements OnInit {
   myTelegram() {
     window.location.href = 'https://t.me/SendMessagesHere';
   }
+
+  myGit() {
+    window.location.href = 'https://github.com/Edw1x';
+  }
 }

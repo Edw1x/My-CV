@@ -24,9 +24,10 @@
 
       li {
         font-size: 1rem;
-        font-weight: 100;
+        font-weight: 350;
         color: $base-color;
-        list-style: circle;
+        display: inline-block;
+        margin-right: .2em;
       }
     }
   }
