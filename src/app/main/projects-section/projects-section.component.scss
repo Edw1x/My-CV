@@ -91,35 +91,35 @@
           }
 
           .photo-frame:nth-of-type(1) {
-            @include photo-fr-nth-child("/assets/wedding_0.jpg");
+            @include photo-fr-nth-child("https://github.com/Edw1x/My-CV/blob/main/src/assets/wedding_0.jpg?raw=true");
           }
 
           .photo-frame:nth-of-type(2) {
-            @include photo-fr-nth-child("/assets/wedding_1.jpg");
+            @include photo-fr-nth-child("https://github.com/Edw1x/My-CV/blob/main/src/assets/wedding_1.jpg?raw=true");
           }
 
           .photo-frame:nth-of-type(3) {
-            @include photo-fr-nth-child("/assets/wedding_2.jpg");
+            @include photo-fr-nth-child("https://github.com/Edw1x/My-CV/blob/main/src/assets/wedding_2.jpg?raw=true");
           }
 
           .photo-frame:nth-of-type(4) {
-            @include photo-fr-nth-child("/assets/wedding_3.jpg");
+            @include photo-fr-nth-child("https://github.com/Edw1x/My-CV/blob/main/src/assets/wedding_3.jpg?raw=true");
           }
 
           .photo-frame-second:nth-of-type(1) {
-            @include photo-fr-nth-child("/assets/Freelance_0.jpg");
+            @include photo-fr-nth-child("https://github.com/Edw1x/My-CV/blob/main/src/assets/Freelance_0.jpg?raw=true");
           }
 
           .photo-frame-second:nth-of-type(2) {
-            @include photo-fr-nth-child("/assets/Freelance_1.jpg");
+            @include photo-fr-nth-child("https://github.com/Edw1x/My-CV/blob/main/src/assets/Freelance_1.jpg?raw=true");
           }
 
           .photo-frame-second:nth-of-type(3) {
-            @include photo-fr-nth-child("/assets/Freelance_2.jpg");
+            @include photo-fr-nth-child("https://github.com/Edw1x/My-CV/blob/main/src/assets/Freelance_2.jpg?raw=true");
           }
 
           .photo-frame-second:nth-of-type(4) {
-            @include photo-fr-nth-child("/assets/Freelance_3.jpg");
+            @include photo-fr-nth-child("https://github.com/Edw1x/My-CV/blob/main/src/assets/Freelance_3.jpg?raw=true");
           }
         }
 

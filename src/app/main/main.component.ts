@@ -16,15 +16,6 @@ export class MainComponent implements OnInit {
       menu: '#menu',
       anchors: ['hero','bio','projects','socials'],
       // fullpage options
-
-
-      // fullpage callbacks
-      afterResize: () => {
-        console.log("After resize");
-      },
-      afterLoad: (origin, destination, direction) => {
-        console.log(origin.index);
-      }
     };
   }
 

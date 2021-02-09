@@ -6,13 +6,13 @@
 }
 
 .info-line {
-  @include flex-display(center,stretch,row);
+  @include flex-display(center, stretch, row);
 
   margin-top: 1rem;
   width: 85%;
 
   .info-line-title {
-    @include flex-display(flex-end,stretch,row);
+    @include flex-display(flex-end, stretch, row);
 
     width: 25%;
 
@@ -27,18 +27,18 @@
         font-weight: 350;
         color: $base-color;
         display: inline-block;
-        margin-right: .2em;
+        margin-right: 0.2em;
       }
     }
   }
 
   .info-line-separator {
-    @include flex-display(center,stretch,column);
+    @include flex-display(center, stretch, column);
     @include width-height(0.3%, 100%);
 
     margin: 0 1rem;
 
-    div{
+    div {
       @include width-height(100%, 75%);
 
       background-color: rgb(255, 255, 255);
@@ -47,7 +47,7 @@
   }
 
   .info-line-text {
-    @include flex-display(left,stretch,row);
+    @include flex-display(left, stretch, row);
 
     width: 69.7%;
 
@@ -62,7 +62,7 @@
 }
 
 .hero-bottom-gradient {
-  @include flex-display(center,stretch,row);
+  @include flex-display(center, stretch, row);
   @include width-height(100%, 15%);
 
   position: absolute;
@@ -72,14 +72,14 @@
 }
 
 .main-hero-content {
-  @include flex-display(center,stretch,row);
+  @include flex-display(center, stretch, row);
 
   position: absolute;
   top: 25%;
   width: 100%;
 
   .main-text {
-    @include flex-display(center,center,row);
+    @include flex-display(center, center, row);
 
     animation: fadeIn ease 8s;
     -webkit-animation: fadeIn ease 8s;
@@ -109,13 +109,13 @@
   }
 
   .main-logo {
-    @include flex-display(center,center,row);
+    @include flex-display(center, center, row);
 
     width: 50%;
     text-align: center;
 
     .logo {
-      @include flex-display(center,center,row);
+      @include flex-display(center, center, row);
       @include width-height(27em, 27em);
 
       text-align: center;
@@ -129,12 +129,8 @@
 
         border-radius: 50%;
         border: 15px solid $second-base-color;
-        background: linear-gradient(
-            225deg,
-            rgba(17, 26, 34, 0.2),
-            rgba(14, 22, 29, 0.2)
-          ),
-          url(/../assets/photo_pz.jpg);
+        background: linear-gradient(225deg, rgba(17, 26, 34, 0.2), rgba(14, 22, 29, 0.2)),
+          url(https://github.com/Edw1x/My-CV/blob/main/src/assets/photo_pz.jpg?raw=true);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -189,7 +185,6 @@
   .info-line {
     width: 100%;
     .info-line-title {
-
       h1 {
         font-size: 1.7rem;
         li {
@@ -252,7 +247,7 @@
     .info-line-text {
       width: 55%;
       p {
-        font-size: .9rem;
+        font-size: 0.9rem;
       }
     }
   }
@@ -361,5 +356,31 @@
         font-size: 0.8rem;
       }
     }
+  }
+    .main-hero-content{
+    top: 21%;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-bottom-gradient {
+    display: none;
+  }
+  .info-line {
+    .info-line-title {
+      display: none;
+    }
+
+    .info-line-separator {
+      display: none;
+    }
+
+    .info-line-text {
+      display: none;
+    }
+  }
+
+  .main-hero-content{
+    top: 15%;
   }
 }

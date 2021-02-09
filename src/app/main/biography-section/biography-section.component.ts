@@ -9,7 +9,6 @@ export class BiographySectionComponent implements OnInit {
   constructor() {}
 
   showGeneralInfo() {
-    console.log('fuck you');
     let uni = document.getElementById('General');
     let hard = document.getElementById('Hard');
     let soft = document.getElementById('Soft');
@@ -21,7 +20,6 @@ export class BiographySectionComponent implements OnInit {
   }
 
   showSoftInfo() {
-    console.log('fuck you');
     let uni = document.getElementById('General');
     let hard = document.getElementById('Hard');
     let soft = document.getElementById('Soft');
@@ -33,7 +31,6 @@ export class BiographySectionComponent implements OnInit {
   }
 
   showHardInfo() {
-    console.log('fuck you');
     let uni = document.getElementById('General');
     let hard = document.getElementById('Hard');
     let soft = document.getElementById('Soft');
@@ -45,7 +42,6 @@ export class BiographySectionComponent implements OnInit {
   }
 
   showOtherInfo() {
-    console.log('fuck you');
     let uni = document.getElementById('General');
     let hard = document.getElementById('Hard');
     let soft = document.getElementById('Soft');
